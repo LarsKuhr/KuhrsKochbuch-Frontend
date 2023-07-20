@@ -16,7 +16,7 @@ const Home = () => {
             var addition = "non"
             if (cat) addition = cat
 
-            const response = await fetch('/api/recipes/all/'+addition)
+            const response = await fetch('https://kuhrkochbuch-api.onrender.com/api/recipes/all/'+addition)
             const json = await response.json()
 
             if (response.ok) {

@@ -10,7 +10,7 @@ const Recipe = () => {
     useEffect(() => {
 
         const getRecipe = async () => {
-            const respone = await fetch('/api/recipes/'+id)
+            const respone = await fetch('https://kuhrkochbuch-api.onrender.com/api/recipes/'+id)
             const json = await respone.json()
 
             if (respone.ok) {
