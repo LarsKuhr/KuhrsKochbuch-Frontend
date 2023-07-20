@@ -6,7 +6,7 @@ import cat_teig from '../images/recipeIcons/cat_teig.png'
 import cat_salat from '../images/recipeIcons/cat_salat.png'
 import cat_suppe from '../images/recipeIcons/cat_suppe.png'
 import cat_anderes from '../images/recipeIcons/cat_anderes.png'
-import cat_kuchen from '../images/recipeIcons/cat_nudeln.png'
+import cat_kuchen from '../images/recipeIcons/cat_kuchen.png'
 import cat_desserts from '../images/recipeIcons/cat_desserts.png'
 
 const RecipeCard = ({recipe}) => {

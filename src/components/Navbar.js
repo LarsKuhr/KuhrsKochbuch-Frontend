@@ -5,7 +5,7 @@ const Navbar = () => {
         <header>
             <div className="navbar">
                 <Link to="/" className='title'>
-                    Kuhr's Kochbuch
+                    Kuhrs Kochbuch
                 </Link>
                 <Link to="/" className='subLinks hide2'>
                     Home
