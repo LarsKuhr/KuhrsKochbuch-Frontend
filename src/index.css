@@ -293,3 +293,74 @@ header {
     padding-right: 1.5rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .pages {
+    width: 95%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .recipePage h1 {
+    font-size: 2rem;
+  }
+
+  .ingredients h2 {
+    font-size: 1.25rem;
+  }
+
+  .ingredients p {
+    font-size: 1rem;
+  }
+
+  .steps h2 {
+    font-size: 1.25rem;
+  }
+
+  .steps p {
+    font-size: 0.75rem;
+  }
+
+  .steps h4 {
+    font-size: 1.5rem;
+    padding-left: 0rem;
+    padding-right: 1.5rem;
+  }
+
+  .bar h1 {
+    font-size: 1.5rem;
+  }
+
+  .barItems {
+    font-size: 1rem;
+    margin: 0rem;
+  }
+
+  .recipe a {
+    font-size: 1.1rem;
+  }
+
+  .recipe {
+    padding: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .bar {
+    padding: .5rem;
+    padding-left: 1rem;
+  }
+
+  .recipe h3 {
+    font-size: .75rem;
+  }
+
+  .image img {
+    margin: 0 auto;
+    width: 3rem;
+    height: 3rem;
+  }
+}
