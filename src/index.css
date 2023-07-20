@@ -5,9 +5,291 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Colors */
+:root {
+  --primary: #0c4a6e;
+  --secondary: #7f1d1d;
+  --background: #e5e7eb;
+}
+
+header {
+  background-color: var(--primary);
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.subLinks {
+  font-size: 2rem;
+}
+
+.pages {
+  width: 35%;
+  margin: 3rem auto;
+}
+
+.recipe {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.recipe h3 {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.recipe a {
+  margin-bottom: 0;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.image img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.image {
+  margin-right: 2.5rem;
+}
+
+.recipePage h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+}
+
+.ingredients {
+  background-color: white;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-bottom: 3rem;
+}
+
+.ingredients h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+.ingredients p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  margin-top: .75rem;
+}
+
+.steps h2 {
+  background-color: white;
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 1rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+  padding: .5rem 1.5rem;
+}
+
+.numbers {
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.steps p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.bar {
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: .5rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barItems {
+  font-size: 1.35rem;
+  margin: 0 1rem;
+  padding: .5rem;
+  background-color: white;
+  color: var(--primary);
+  font-weight: bold;
+  border: 0;
+}
+
+@media screen and (max-width: 2200px) {
+  .pages {
+    width: 40%;
+  }
+  .navbar {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .pages {
+    width: 50%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .pages {
+    width: 60%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .pages {
+    width: 70%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .pages {
+    width: 80%;
+  }
+  .navbar {
+    max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .pages {
+    width: 85%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pages {
+    width: 90%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+  .hide {
+    display: none;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .bar h1 {
+    font-size: 1.5rem;
+  }
+
+  .barItems {
+    font-size: 1.2rem;
+  }
+
+  .recipe a {
+    font-size: 1.3rem;
+  }
+
+  .recipe h3 {
+    font-size: 1rem;
+  }
+
+  .image img {
+    margin: 0 auto;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pages {
+    width: 90%;
+  }
+  .navbar {
+    max-width: 80%;
+  }
+  .hide {
+    display: none;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .hide2 {
+    display: none;
+  }
+
+  .ingredients h2 {
+    font-size: 1.5rem;
+  }
+
+  .ingredients p {
+    font-size: 1rem;
+  }
+
+  .steps h2 {
+    font-size: 1.5rem;
+  }
+
+  .steps p {
+    font-size: 1rem;
+  }
+
+  .steps h4 {
+    font-size: 1.5rem;
+    padding-left: 0rem;
+    padding-right: 1.5rem;
+  }
 }
