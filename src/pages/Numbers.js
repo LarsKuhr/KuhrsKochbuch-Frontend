@@ -47,6 +47,19 @@ const Numbers = () => {
         };
     }, [])
 
+    useEffect(() => {
+        const resetOnResize = () => {
+          if (window.innerWidth <= 1023) document.body.style.overflow = "hidden";
+          if (window.innerWidth >= 1024) document.body.style.overflow = "scrolls";
+        };
+
+        document.body.style.overflow = "hidden";
+    
+        return () => {
+          window.removeEventListener("resize", resetOnResize);
+        };
+      }, []);
+
 
     return (
         <div name="numbers">
