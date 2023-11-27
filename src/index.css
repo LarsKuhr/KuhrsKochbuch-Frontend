@@ -160,6 +160,10 @@ header {
   border: 0;
 }
 
+#canvas {
+  border: 1px solid rgba(0,0,0,.5);
+}  
+
 @media screen and (max-width: 2200px) {
   .pages {
     width: 40%;

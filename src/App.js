@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Recipe from './pages/Recipe'
 
+import Numbers from './pages/Numbers'
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +21,10 @@ function App() {
             <Route 
               path='/'  
               element={<Home />}
+            />
+            <Route
+              path='/Lars'
+              element={<Numbers />}
             />
             <Route
               path='/recipe/:id'
