@@ -10,7 +10,7 @@ const Navbar = () => {
                 <Link to="/" className='subLinks hide2'>
                     Home
                 </Link>
-                <Link to="/" className='subLinks hide'>
+                <Link to="/Lars" className='subLinks hide'>
                     Admin
                 </Link>
             </div>
