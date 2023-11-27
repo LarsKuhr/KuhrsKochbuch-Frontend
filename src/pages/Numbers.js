@@ -11,8 +11,8 @@ const Numbers = () => {
         var ctx = canvas.getContext('2d');
 
         var container = document.getElementById('container');
-        canvas.width = 50;
-        canvas.height = 50;
+        canvas.width = 300;
+        canvas.height = 300;
 
         var mouse = {x: 0, y: 0};
 
@@ -25,7 +25,7 @@ const Numbers = () => {
         ctx.lineCap = 'round';
         ctx.strokeStyle = 'black';
         ctx.globalCompositeOperation = "multiply";
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 12;
         // ctx.globalCompositeOperation = "destination-out";
 
         canvas.addEventListener('pointerdown', function(e) {
@@ -45,6 +45,7 @@ const Numbers = () => {
             ctx.lineTo(mouse.x, mouse.y);
             ctx.stroke();
         };
+
     }, [])
 
     useEffect(() => {
@@ -60,11 +61,17 @@ const Numbers = () => {
         };
       }, []);
 
+    const refresh = () => {
+        var canvas = canvasRef.current;
+        var ctx = canvas.getContext('2d');
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
 
     return (
         <div name="numbers">
             <h1>Bite hier zeichnen</h1>
-
+            <button id="refresh" onClick={refresh}>Refresh</button>
             <div id="container">
                 <canvas id="canvas" ref={canvasRef}></canvas>
             </div>
