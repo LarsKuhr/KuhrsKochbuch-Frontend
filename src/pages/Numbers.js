@@ -10,8 +10,8 @@ const Numbers = () => {
         console.log(canvas)
         var ctx = canvas.getContext('2d');
 
-        canvas.width = 200;
-        canvas.height = 200;
+        canvas.width = 100;
+        canvas.height = 100;
 
         var mouse = {x: 0, y: 0};
 
