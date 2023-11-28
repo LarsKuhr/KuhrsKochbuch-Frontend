@@ -24,7 +24,7 @@ const Numbers = () => {
         ctx.lineCap = 'round';
         ctx.strokeStyle = 'black';
         ctx.globalCompositeOperation = "multiply";
-        ctx.lineWidth = 8;
+        ctx.lineWidth = 6;
         // ctx.globalCompositeOperation = "destination-out";
 
         canvas.addEventListener('pointerdown', function(e) {
