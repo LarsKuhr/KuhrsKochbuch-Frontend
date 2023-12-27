@@ -71,21 +71,22 @@ const Numbers = () => {
     const [count, setCount] = useState(null);
     const [rndNumbers, setNumbers] = useState(null);
     const [i, setI] = useState(null);
+    
+    const [rndNumber, setNumber] = useState(null)
 
     const send = () => {
 
-        if (!i) newRun();
-        setI(i + 1);
-        if (i === 9) newRun();
-
         setCount(count + 1);
         saveToDB();
-
+        // if (!i) newRun();
+        // setI(i + 1);
+        // if (i === 9) newRun();
+        newRun()
         refresh();
     }
 
     const saveToDB = async () => {
-        if (!rndNumbers) return
+        if (rndNumber == null) return
 
         var canvas = canvasRef.current;
         var ctx = canvas.getContext('2d');
@@ -95,7 +96,7 @@ const Numbers = () => {
         for (let j = 1; j < canvas.width*canvas.height; j++) {
             pixel.push(data.data[j*4-1])
         }
-        console.log(pixel)
+    
 
         var name = document.getElementById('name').value;
 
@@ -103,7 +104,7 @@ const Numbers = () => {
 
         const number = {
             "img": pixel,
-            "num": rndNumbers[i],
+            "num": rndNumber,
             "name": name 
         }
 
@@ -118,9 +119,11 @@ const Numbers = () => {
     }
 
     const newRun = () => {
-        numbers = numbers.sort((a, b) => 0.5 - Math.random());
-        setNumbers(numbers);
-        setI(0);
+        // numbers = numbers.sort((a, b) => 0.5 - Math.random());
+        // setNumbers(numbers);
+        // setI(0);
+
+        setNumber(Math.floor(Math.random() * (9 - 0 + 1) + 0))
     }
 
     return (
@@ -129,7 +132,7 @@ const Numbers = () => {
             <input type="text" name="name" id="name" />
             
             <h1>Bitte hier zeichnen</h1>
-            <h2>Zahl: {i && rndNumbers[i]} </h2>
+            <h2>Zahl: {rndNumber} </h2>
             <button id="Send" onClick={send}>Send</button>
             <button id="refresh" onClick={refresh}>Refresh</button>
             <div id="container">
