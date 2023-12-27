@@ -92,8 +92,8 @@ const Numbers = () => {
 
         const data = ctx.getImageData(0, 0, canvas.width, canvas.height)
         const pixel = [0]
-        for (let i = 1; i < canvas.width*canvas.height; i++) {
-            pixel.push(data.data[i*4-1])
+        for (let j = 1; j < canvas.width*canvas.height; j++) {
+            pixel.push(data.data[j*4-1])
         }
         console.log(pixel)
 
